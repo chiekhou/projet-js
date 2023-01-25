@@ -14,16 +14,16 @@
         align-items: center;
         justify-content: center;
         top: 0px;
-      
+
     /*it specifies the mouse cursor to be displayed
         when it is pointed over the element */
         cursor: pointer;
     }
       
     .nav-list {
-        width: 50%;
         display: flex;
-       
+        background-color: pink;
+        margin-left: 50%;
     }
       
     .nav-list li {
@@ -31,33 +31,35 @@
         padding: 26px 30px;
        
     }
-      
+
     .nav-list li a {
         text-decoration: none;
         color: white;
     }
-      
-    .nav-list li a:hover {
-        color: black;
-    }
-      
-    .leftNav {
-        width: 50%;
-        text-align: left;
-    }
-      
-    #search {
-        padding: 5px;
-        font-size: 17px;
-        border: 2px solid grey;
-        border-radius: 9px;
-    }
-    
     .config-heure {
         background-color: aqua;
     }
 
-    #ch, #cs ,#cm , #annee, #mois, #jour{
+    .ch, .cs ,.cm , .annee, .mois, .jour{
         display: none;
     }
-   
+
+    .dark-mode{
+        background: #000;
+        color: #fff;
+    }
+
+
+    .light-mode{
+        background:#fff;
+        color:  #000;
+    }
+
+    .none-mode{
+       display: none;
+    }
+
+
+    .block-mode{
+        display: block;
+    }

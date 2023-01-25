@@ -11,27 +11,21 @@
 
     <nav class="navbar background">
 
-        <div class="leftNav">
-
-            <input type="text" name="search" id="search" />
-             <button class="btn btn-sm">Search</button>
-            
-         </div>
-
-        <ul class="nav-list">
+         <ul class="nav-list">
             <li class="batterie"><a href="#">La batterie</a></li>
             <li class="vibration" ><a href="#">Vibration</a></li>
             <li class="latence"><a href="#">Latence</a></li> 
             <li class="heuresComplete"><a href="#"></a></li>
-            <li id="ch" ><a href="#"></a></li>
-            <li id="cm" ><a href="#"></a></li>
-            <li id="cs" ><a href="#"></a></li>
-            <li id ="date" class="date"><a href="#"></a></li>
-            <li id ="annee"><a href="#"></a></li>
-            <li id ="mois" ><a href="#"></a></li>
-            <li id ="jour"><a href="#"></a></li>
+            <li class="ch" ><a href="#"></a></li>
+            <li class="cm" ><a href="#"></a></li>
+            <li class="cs" ><a href="#"></a></li>
+            <li class="date" class="date"><a href="#"></a></li>
+            <li class="annee"><a href="#"></a></li>
+            <li class ="mois" ><a href="#"></a></li>
+            <li class ="jour"><a href="#"></a></li>
 
         </ul>
+
     </nav>
 
     <div class="config-latence">
@@ -46,7 +40,7 @@
         <button class="afficher-batterie">Afficher</button>
         <button class="masquer-batterie">Masquer</button>
     </div>
-    <br><br>
+    <br>
 
     <div class="config-heure">
 
@@ -69,7 +63,7 @@
         </div> 
     </div> 
 
-    <br><br>
+    <br>
 
   <div class="config-date">
     <h6>Afficher/Masquer la date</h6>
@@ -83,27 +77,31 @@
         </div>
 
         <h6>Afficher/Masquer les mois</h6>
-        <div class="mois">
+        
             <button class="afficher-mois">Afficher</button>
             <button class="masquer-mois">Masquer</button>
-            </div>
 
+
+            <div class="jours">
             <h6>Afficher/Masquer les jours</h6>
-        <div class="jour">
             <button class="afficher-jour">Afficher</button>
             <button class="masquer-jour">Masquer</button>
-        </div> 
-
-    <br><br>
+        </div>
+    <br>
 
     <div class="config-vibration">
         <button class="afficher">Afficher</button>
         <button class="masquer">Masquer</button>
+    </div>
+    
+    <div class="config-mode">
+        <button class="mdark">Dark</button>
+        <button class="mlight">Light</button>
     </div> 
 
-   
+  
     
     <script src="/Projet-JS/js/parametre.js" type="module"></script>
-    <script src="/Projet-JS/js/main.js" type="module></script>
+    <script src="/Projet-JS/js/main.js" type="module"></script>
 </body>
 </html>

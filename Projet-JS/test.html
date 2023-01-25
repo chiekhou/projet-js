@@ -1,22 +1,39 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <script src="ping.js"></script>
-
-    <script>
-        var do_ping = function() {
-            ping(document.getElementById('pingurl').value).then(function(delta) {
-                alert(delta);
-            }).catch(function(error) {
-                alert(String(error));
-            });
-        };
-        </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Docu</title>
 </head>
-
 <body>
-    <input id='pingurl' type='text' value='https://google.com'></input>
-    <button onclick='do_ping()'>Ping</button>
-</body>
+    <nav class="navbar background">
 
+        <div class="leftNav">
+
+            <input type="text" name="search" id="search" />
+            <button class="btn btn-sm">Search</button>
+
+        </div>
+
+        <ul class="nav-list">
+            <li class="batterie"><a href="#">La batterie</a></li>
+            <li class="vibration" ><a href="#">Vibration</a></li>
+            <li class="latence"><a href="#">Latence</a></li> 
+            <li class="heuresComplete"><a href="#"></a></li>
+            <li id="ch" ><a href="#"></a></li>
+            <li id="cm" ><a href="#"></a></li>
+            <li id="cs" ><a href="#"></a></li>
+            <li id ="date" class="date"><a href="#"></a></li>
+            <li id ="annee"><a href="#"></a></li>
+            <li id ="mois" ><a href="#"></a></li>
+            <li id ="jour"><a href="#"></a></li>
+
+        </ul>
+
+    </nav>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/parametre.js" type="module"></script>
+</body>
+</html>

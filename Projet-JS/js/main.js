@@ -1,18 +1,17 @@
-import { isJsxFragment } from "typescript";
-
-export { heuresComplete, dateDiv , batterie ,latence, masquerHeure}
-
+export { batterie ,latence, heuresComplete,masquerHeure,masquerMinute,masquerSeconde,dateDiv,masquerAnnee,masquerMois,masquerJour, themeSysteme}
+var element = document.body;
 var heuresComplete = document.querySelector('.heuresComplete');
-var masquerHeure = document.querySelector('#ch');
-var masquerMin = document.querySelector('#cm');
-var masquerSec = document.querySelector('#cs');
-var dateDiv = document.querySelector('.date');
-var masquerAnnee = document.querySelector('#annee')
-var masquerMois = document.querySelector('#mois')
-var masquerJour = document.querySelector('#jour')
 var batterie = document.querySelector('.batterie');
 var latence= document.querySelector('.latence');
 var vibration = document.querySelector('.vibration');
+var masquerHeure = document.querySelector('.ch');
+var masquerMinute = document.querySelector('.cm');
+var masquerSeconde = document.querySelector('.cs');
+var dateDiv = document.querySelector('.date');
+var masquerAnnee = document.querySelector('.annee')
+var masquerMois = document.querySelector('.mois')
+var masquerJour = document.querySelector('.jour')
+
 
 // Récupérer la date actuelle : 
 var today = new Date();
@@ -62,7 +61,6 @@ masquerAnnee.textContent =  jourNom + ", " + jourNumero + " " + mois
 masquerMois.textContent =  jourNom + ", " + jourNumero + " " + annee;
 masquerJour.textContent =  mois + " " + annee;
 
-
 }
 affichageDate();
 
@@ -72,9 +70,8 @@ var affichageHeure = function(){
 
     heuresComplete.textContent = heures + ":" + minutes + ":" + secondes ;
     masquerHeure.textContent =  minutes + ":" + secondes;
-    masquerHeure.textContent =  minutes + ":" + secondes;
-    masquerMin.textContent =  heures + ":" + secondes;
-    masquerSec.textContent = heures + ":" + minutes;
+    masquerMinute.textContent =  heures + ":" + secondes;
+    masquerSeconde.textContent = heures + ":" + minutes;
 
     // Lancer la fonction affichage heure toutes les 1000 ms, soit toute les secondes : 
     setTimeout(affichageHeure, 1000);
@@ -84,10 +81,13 @@ affichageHeure()
 
 
 var affichageLatence = function(){
-    var lat = navigator.connection.rtt;
-    //Affichage dans nos DIV du HTML : 
-    latence.textContent = lat + "/ms" ;
+        let lat = navigator.connection.rtt;
+        //  var late = Number(localStorage.getItem('latence'))
+        //Affichage dans nos DIV du HTML : 
+        latence.textContent = lat  + "/ms" ;
+        console.log(lat)
 }
+
 
 affichageLatence();
 
@@ -138,6 +138,33 @@ if (navigator.vibrate) {
         });
 }
 
-
-// vibration.addEventListener("click" , function() {
+function themeSysteme() {
+   
+    if (element.classList.contains("dark-mode")) {
+      element.classList.remove("dark-mode");
+      element.classList.add("light-mode");
+      localStorage.setItem("theme", "light-mode");
+    
+    }
+    else{
+    element.classList.remove("light-mode");
+    element.classList.add("dark-mode");
+    localStorage.setItem("theme", "dark-mode");
+    
+    }
+    //document.getElementById("currentTheme").innerHTML= localStorage.theme;
+    //element.innerHTML= localStorage.theme;
+    
+    }
+    element.classList.add(localStorage.theme); 
+    latence.classList.add(localStorage.displayLat);
+    batterie.classList.add(localStorage.displayBat);
+    heuresComplete.classList.add(localStorage.displayH);
+    masquerHeure.classList.add(localStorage.displayMh);
+    masquerMinute.classList.add(localStorage.displayMm);
+    masquerSeconde.classList.add(localStorage.displayMs);
+    dateDiv.classList.add(localStorage.displayDc);
+    masquerAnnee.classList.add(localStorage.displayMda);
+    masquerMois.classList.add(localStorage.displayMdm);
+    masquerJour.classList.add(localStorage.displayMdj);
 
