@@ -1,65 +1,75 @@
 * {
     /* Here we set the margin and padding  0 */
-      margin: 0; 
-      
-        padding: 0;
-    }
-      
-    .navbar {
-        display: flex;
-        background-color: brown;
-    /* This is used to make the navbar sticky, So that the
-        navbar stays at the top part even if we scroll */
-        position: sticky; 
-        align-items: center;
-        justify-content: center;
-        top: 0px;
+    margin: 0;
 
-    /*it specifies the mouse cursor to be displayed
-        when it is pointed over the element */
-        cursor: pointer;
-    }
-      
-    .nav-list {
-        display: flex;
-        background-color: pink;
-        margin-left: 50%;
-    }
-      
-    .nav-list li {
-        list-style: none;
-        padding: 26px 30px;
-       
-    }
+    padding: 0;
+}
 
-    .nav-list li a {
-        text-decoration: none;
-        color: white;
-    }
-    .config-heure {
-        background-color: aqua;
-    }
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
-    .ch, .cs ,.cm , .annee, .mois, .jour{
-        display: none;
-    }
+.navbar {
+    background-color: brown;
+}
 
-    .dark-mode{
-        background: #000;
-        color: #fff;
-    }
+.nav-list {
+    height: 30px;
+    background-color: pink;
+    padding: 1em;
+}
+
+.nav-list li {
+    list-style: none;
+    padding: 10px 10px;
+    float: right;
+
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+}
+
+.ch,
+.cs,
+.cm,
+.annee,
+.mois,
+.jour {
+    display: none;
+}
+
+.dark-mode {
+    background: #000;
+    color: #fff;
+}
 
 
-    .light-mode{
-        background:#fff;
-        color:  #000;
-    }
+.light-mode {
+    background: #fff;
+    color: #000;
+}
 
-    .none-mode{
-       display: none;
-    }
+.none-mode {
+    display: none;
+}
+
+.block-mode {
+    display: block;
+}
+
+.batterie {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-top: 8px;
+    height: 1px;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
-    .block-mode{
-        display: block;
-    }
+
+}
