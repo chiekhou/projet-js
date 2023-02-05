@@ -1,4 +1,4 @@
-import { heuresComplete, masquerHeure,masquerMinute,masquerSeconde,dateDiv, batterie, latence, masquerAnnee , masquerMois, masquerJour, themeSysteme} from './main.js';
+import { heuresComplete, masquerHeure, masquerMinute, masquerSeconde, dateDiv, batterie, latence, masquerAnnee, masquerMois, masquerJour, themeSysteme } from './main.js';
 var afficherLat = document.querySelector(".afficher-latence");
 var masquerLat = document.querySelector(".masquer-latence");
 var afficherBat = document.querySelector(".afficher-batterie");
@@ -22,48 +22,48 @@ var light = document.querySelector(".mlight")
 
 // Affichage et masquer la latence
 afficherLat.addEventListener("click", () => {
-  if(getComputedStyle(latence).display != "block"){
+  if (getComputedStyle(latence).display != "block") {
     latence.classList.remove("block-mode")
     latence.classList.add("block-mode")
     localStorage.setItem("displayLat", "block-mode");
-    
+
   }
 })
 
 masquerLat.addEventListener("click", () => {
-  if(getComputedStyle(latence).display != "none"){
+  if (getComputedStyle(latence).display != "none") {
     latence.classList.remove("block-mode")
     latence.classList.add("none-mode")
-    localStorage.setItem("displayLat", "none-mode"); 
+    localStorage.setItem("displayLat", "none-mode");
   }
-  })
- 
-  
+})
+
+
 
 //Affichage et masquer batterie
 
 afficherBat.addEventListener("click", () => {
-  if(getComputedStyle(batterie).display != "block"){
+  if (getComputedStyle(batterie).display != "block") {
     batterie.classList.remove("block-mode")
     batterie.classList.add("block-mode")
     localStorage.setItem("displayBat", "block-mode");
   }
-  
+
 });
 
 masquerBat.addEventListener("click", () => {
-    if(getComputedStyle(batterie).display != "none"){
-      batterie.classList.remove("block-mode")
-      batterie.classList.add("none-mode")
-      localStorage.setItem("displayBat", "none-mode"); 
-      }
-  })
+  if (getComputedStyle(batterie).display != "none") {
+    batterie.classList.remove("block-mode")
+    batterie.classList.add("none-mode")
+    localStorage.setItem("displayBat", "none-mode");
+  }
+})
 
 
-   // Affichage et masquer heure , min , sec
+// Affichage et masquer heure , min , sec
 
 afficherH.addEventListener("click", () => {
-  if(getComputedStyle(heuresComplete).display != "block"){
+  if (getComputedStyle(heuresComplete).display != "block") {
     masquerHeure.classList.remove("block-mode")
     heuresComplete.classList.add("block-mode")
     localStorage.setItem("displayH", "block-mode");
@@ -73,143 +73,142 @@ afficherH.addEventListener("click", () => {
 })
 
 masquerH.addEventListener("click", () => {
-    if(getComputedStyle(heuresComplete).display != "none"){
-      heuresComplete.classList.remove("block-mode")
-      heuresComplete.classList.add("none-mode")
-      masquerHeure.classList.add("block-mode");
-      localStorage.setItem("displayH", "none-mode");
-      localStorage.setItem("displayMh", "block-mode");      
-     
-      ;
-    }
- }) 
+  if (getComputedStyle(heuresComplete).display != "none") {
+    heuresComplete.classList.remove("block-mode")
+    heuresComplete.classList.add("none-mode")
+    masquerHeure.classList.add("block-mode");
+    localStorage.setItem("displayH", "none-mode");
+    localStorage.setItem("displayMh", "block-mode");
 
-  afficherMin.addEventListener("click", () => {
-    if(getComputedStyle(heuresComplete).display != "block"){
-      masquerMinute.classList.remove("block-mode")
-      heuresComplete.classList.add("block-mode")
-      localStorage.setItem("displayH", "block-mode");
-      localStorage.setItem("displayMm", "none-mode");
-      ;
-    }
-  })
-  
-  masquerMin.addEventListener("click", () => {
-    if(getComputedStyle(heuresComplete).display != "none"){
-      heuresComplete.classList.remove("block-mode")
-      heuresComplete.classList.add("none-mode")
-      masquerMinute.classList.add("block-mode");
-      localStorage.setItem("displayH", "none-mode");
-      localStorage.setItem("displayMm", "block-mode");      
-     
-      ;
-    }
-    }) 
+    ;
+  }
+})
 
-    
-  afficherSec.addEventListener("click", () => {
-    if(getComputedStyle(heuresComplete).display != "block"){
-      masquerSeconde.classList.remove("block-mode")
-      heuresComplete.classList.remove("none-mode")
-      localStorage.setItem("displayMs", "none-mode");
-      localStorage.setItem("displayH", "block-mode");
-      ;
-    }
-  })
-  
-  masquerSec.addEventListener("click", () => {
-    if(getComputedStyle(heuresComplete).display != "block"){
-      heuresComplete.classList.remove("block-mode")
-      heuresComplete.classList.add("none-mode")
-      masquerSeconde.classList.add("block-mode");
-      localStorage.setItem("displayH", "none-mode");
-      localStorage.setItem("displayMs", "block-mode");      
-     
-      ;
-    }
-    }) 
+afficherMin.addEventListener("click", () => {
+  if (getComputedStyle(heuresComplete).display != "block") {
+    masquerMinute.classList.remove("block-mode")
+    heuresComplete.classList.add("block-mode")
+    localStorage.setItem("displayH", "block-mode");
+    localStorage.setItem("displayMm", "none-mode");
+    ;
+  }
+})
 
-  // Afficher/Masquer la date , l'annee , le mois , le jour 
+masquerMin.addEventListener("click", () => {
+  if (getComputedStyle(heuresComplete).display != "none") {
+    heuresComplete.classList.remove("block-mode")
+    heuresComplete.classList.add("none-mode")
+    masquerMinute.classList.add("block-mode");
+    localStorage.setItem("displayH", "none-mode");
+    localStorage.setItem("displayMm", "block-mode");
 
-  afficherDate.addEventListener("click", () => {
-    if(getComputedStyle(dateDiv).display != "block"){
-      dateDiv.classList.remove("block-mode")
+    ;
+  }
+})
+
+
+afficherSec.addEventListener("click", () => {
+  if (getComputedStyle(heuresComplete).display != "block") {
+    masquerSeconde.classList.remove("block-mode")
+    heuresComplete.classList.remove("none-mode")
+    localStorage.setItem("displayMs", "none-mode");
+    localStorage.setItem("displayH", "block-mode");
+    ;
+  }
+})
+
+masquerSec.addEventListener("click", () => {
+  if (getComputedStyle(heuresComplete).display != "none") {
+    heuresComplete.classList.remove("block-mode")
+    heuresComplete.classList.add("none-mode")
+    masquerSeconde.classList.add("block-mode");
+    localStorage.setItem("displayH", "none-mode");
+    localStorage.setItem("displayMs", "block-mode");
+    ;
+  }
+})
+
+// Afficher/Masquer la date , l'annee , le mois , le jour 
+
+afficherDate.addEventListener("click", () => {
+  if (getComputedStyle(dateDiv).display != "block") {
+    dateDiv.classList.remove("block-mode")
     dateDiv.classList.add("block-mode")
     localStorage.setItem("displayDc", "block-mode");
-    
-    }
-  })
-  
-  masquerDate.addEventListener("click", () => {
-      if(getComputedStyle(dateDiv).display != "none"){
-        dateDiv.classList.remove("block-mode")
+
+  }
+})
+
+masquerDate.addEventListener("click", () => {
+  if (getComputedStyle(dateDiv).display != "none") {
+    dateDiv.classList.remove("block-mode")
     dateDiv.classList.add("none-mode")
-    localStorage.setItem("displayDc", "none-mode"); 
-        
-        }
-    })
+    localStorage.setItem("displayDc", "none-mode");
 
-   
-    afficherAnnee.addEventListener("click", () => {
-      if(getComputedStyle(dateDiv).display != "block"){
-        masquerAnnee.classList.remove("none-mode")
-        masquerAnnee.classList.remove("block-mode")
-        dateDiv.classList.add("block-mode")
-        localStorage.setItem("displayDc", "block-mode");
-        localStorage.setItem("displayMda", "none-mode");
-        
-        }
-    })
-    
-    buttonMasquerAnn.addEventListener("click", () => {
-        if(getComputedStyle(dateDiv).display != "none"){
-          dateDiv.classList.remove("block-mode")
-          dateDiv.classList.add("none-mode")
-          masquerAnnee.classList.add("block-mode")
-          localStorage.setItem("displayDc", "none-mode");
-          localStorage.setItem("displayMda", "block-mode"); 
-          }
-      })
+  }
+})
 
-      afficherMois.addEventListener("click", () => {
-        if(getComputedStyle(dateDiv).display != "block"){
-          masquerMois.classList.remove("none-mode")
-          masquerMois.classList.remove("block-mode")
-          dateDiv.classList.add("block-mode")
-          localStorage.setItem("displayDc", "block-mode");
-          localStorage.setItem("displayMdm", "none-mode");
-          
-          }
-      })
-      
-      buttonMasquerMois.addEventListener("click", () => {
-        dateDiv.classList.remove("block-mode")
-        dateDiv.classList.add("none-mode")
-        masquerMois.classList.add("block-mode")
-        localStorage.setItem("displayDc", "none-mode");
-        localStorage.setItem("displayMdm", "block-mode"); 
-        })
 
-        afficherJour.addEventListener("click", () => {
-          if(getComputedStyle(dateDiv).display != "block"){
-          masquerJour.classList.remove("none-mode")
-          masquerJour.classList.remove("block-mode")
-          dateDiv.classList.add("block-mode")
-          localStorage.setItem("displayDc", "block-mode");
-          localStorage.setItem("displayMdj", "none-mode");
-            }
-        })
-        
-        buttonMasquerJour.addEventListener("click", () => {
-          dateDiv.classList.remove("block-mode")
-          dateDiv.classList.add("none-mode")
-          masquerJour.classList.add("block-mode")
-          localStorage.setItem("displayDc", "none-mode");
-          localStorage.setItem("displayMdj", "block-mode"); 
-          })
+afficherAnnee.addEventListener("click", () => {
+  if (getComputedStyle(dateDiv).display != "block") {
+    masquerAnnee.classList.remove("none-mode")
+    masquerAnnee.classList.remove("block-mode")
+    dateDiv.classList.add("block-mode")
+    localStorage.setItem("displayDc", "block-mode");
+    localStorage.setItem("displayMda", "none-mode");
 
-  dark.addEventListener("click" , themeSysteme) ;
-     
+  }
+})
+
+buttonMasquerAnn.addEventListener("click", () => {
+  if (getComputedStyle(dateDiv).display != "none") {
+    dateDiv.classList.remove("block-mode")
+    dateDiv.classList.add("none-mode")
+    masquerAnnee.classList.add("block-mode")
+    localStorage.setItem("displayDc", "none-mode");
+    localStorage.setItem("displayMda", "block-mode");
+  }
+})
+
+afficherMois.addEventListener("click", () => {
+  if (getComputedStyle(dateDiv).display != "block") {
+    masquerMois.classList.remove("none-mode")
+    masquerMois.classList.remove("block-mode")
+    dateDiv.classList.add("block-mode")
+    localStorage.setItem("displayDc", "block-mode");
+    localStorage.setItem("displayMdm", "none-mode");
+
+  }
+})
+
+buttonMasquerMois.addEventListener("click", () => {
+  dateDiv.classList.remove("block-mode")
+  dateDiv.classList.add("none-mode")
+  masquerMois.classList.add("block-mode")
+  localStorage.setItem("displayDc", "none-mode");
+  localStorage.setItem("displayMdm", "block-mode");
+})
+
+afficherJour.addEventListener("click", () => {
+  if (getComputedStyle(dateDiv).display != "block") {
+    masquerJour.classList.remove("none-mode")
+    masquerJour.classList.remove("block-mode")
+    dateDiv.classList.add("block-mode")
+    localStorage.setItem("displayDc", "block-mode");
+    localStorage.setItem("displayMdj", "none-mode");
+  }
+})
+
+buttonMasquerJour.addEventListener("click", () => {
+  dateDiv.classList.remove("block-mode")
+  dateDiv.classList.add("none-mode")
+  masquerJour.classList.add("block-mode")
+  localStorage.setItem("displayDc", "none-mode");
+  localStorage.setItem("displayMdj", "block-mode");
+})
+
+dark.addEventListener("click", themeSysteme);
+
 
 
 
