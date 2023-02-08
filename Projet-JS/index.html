@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
 
     <nav class="navbar background">
         <ul class="nav-list">
@@ -29,6 +30,26 @@
         </ul>
 
     </nav>
+    <!-- <div id="app">
+        <button @click="unlock">test open modal</button>
+        <div :style="{'display': isLock ? 'none' : 'block' }" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" @click="handleLock">&times;</span>
+            </div>
+            <div class="modal-content">
+                <input type="password" :disabled="isLock">
+            </div>
+        </div>
+
+    </div> -->
+
+    <!-- <p>Click the radio button to toggle between password visibility:</p>
+
+    Password:
+    <input type='text' value='' id='myInput'><br><br>
+    <input type='checkbox' onclick='myFunction()'>Show results
+
+    <p id='demo' style='display:none; color: black;'>demo</p> -->
 
     <button> <a href="test.html"> Test </a></button>
 
@@ -115,6 +136,7 @@
 
     <script src="/Projet-JS/js/parametre.js" type="module"></script>
     <script src="/Projet-JS/js/main.js" type="module"></script>
+    <script src="/Projet-JS/js/auth.js"></script>
 </body>
 
 </html>
