@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<h2>Calculatrice</h2>
+
+<form>
+  <input type="text" id="expression" placeholder="Entrez l'expression à évaluer">
+  <button type="button" onclick="calculer()">Calculer</button>
+</form> 
+
+<p id="resultat"></p>
+
+<script>
+function calculer() {
+  var expression = document.getElementById("expression").value;
+  var resultat = eval(expression);
+  document.getElementById("resultat").innerHTML = resultat;
+}
+</script>
+
+</body>
+</html>
