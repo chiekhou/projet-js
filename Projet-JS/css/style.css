@@ -1,22 +1,18 @@
 * {
-    /* Here we set the margin and padding  0 */
-    margin: 0;
 
+    margin: 0;
     padding: 0;
 }
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
 
-.navbar {
-    background-color: brown;
 }
 
 .nav-list {
-    height: 30px;
-    background-color: pink;
-    padding: 1em;
+    height: 20px;
+    padding: 0.8em;
+    background-color: #464141
 }
 
 .nav-list li {
@@ -41,7 +37,7 @@ body {
 }
 
 .dark-mode {
-    background: #000;
+    background: #1B2E32;
     color: #fff;
 }
 
@@ -59,17 +55,156 @@ body {
     display: block;
 }
 
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translate(26px);
+    -ms-transform: translate(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
 .batterie {
-    background-color: transparent;
+    background-color: rgb(79, 211, 79);
     border-radius: 5px;
     border: 1px solid white;
     margin-top: 8px;
     height: 1px;
     display: flex;
-    display: flex;
     justify-content: center;
     align-items: center;
 
+}
+
+#settings {
+    width: 40%;
+    margin: 0 auto;
+    background-color: #464141;
+    color: #fff;
+}
+
+.nav-settings {
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+#settings button {
+    border-radius: 5px;
+    width: 80px;
+    height: 25px;
+    margin: 0px 10px 10px 10px;
+}
+
+.config-latence,
+.config-heure,
+.config-date,
+.config-batterie,
+.config-mode {
+    box-sizing: border-box;
+    text-align: center;
+    padding: auto;
+    padding: 0px 0px 0px 0px;
+
+}
+
+.nav-settings {
+    background-color: black;
+}
+
+.settings-overlay {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.buttons {
+    padding-left: 8px;
+    padding-top: 3px;
+    float: left;
+    line-height: 0px;
+}
+
+.close {
+    background: #ff5c5c;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #e33e41;
+    border-radius: 50%;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.close a {
+    text-decoration: none;
+}
+
+.close a span {
+    color: black;
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+footer {
+    position: fixed;
+    width: 70%;
+    height: 60px;
+    bottom: 0;
+    margin: 0px 0px 40px 200px;
+    border-radius: 10px;
+    background-color: #464141;
 
 
 }

@@ -1,4 +1,4 @@
-import { heuresComplete, masquerHeure, masquerMinute, masquerSeconde, dateDiv, batterie, latence, masquerAnnee, masquerMois, masquerJour, themeSysteme } from './main.js';
+import { heuresComplete, masquerHeure, masquerMinute, masquerSeconde, dateDiv, batterie, latence, masquerAnnee, masquerMois, masquerJour } from './main.js';
 var afficherLat = document.querySelector(".afficher-latence");
 var masquerLat = document.querySelector(".masquer-latence");
 var afficherBat = document.querySelector(".afficher-batterie");
@@ -17,8 +17,12 @@ var afficherMois = document.querySelector(".afficher-mois");
 var buttonMasquerMois = document.querySelector(".masquer-mois");
 var afficherJour = document.querySelector(".afficher-jour");
 var buttonMasquerJour = document.querySelector(".masquer-jour");
-var dark = document.querySelector(".mdark")
-var light = document.querySelector(".mlight")
+const theme = document.querySelector(".theme");
+const body = document.body;
+const settingsDialog = document.querySelector('#settings');
+const settingsOverlay = document.querySelector('#settings-overlay');
+const showSettingsButton = document.querySelector('#show-settings');
+const hideSettingsButton = document.querySelector('#hide-settings');
 
 // Affichage et masquer la latence
 afficherLat.addEventListener("click", () => {
@@ -207,8 +211,35 @@ buttonMasquerJour.addEventListener("click", () => {
   localStorage.setItem("displayMdj", "block-mode");
 })
 
-dark.addEventListener("click", themeSysteme);
+showSettingsButton.addEventListener('click', () => {
+  settingsDialog.show();
+  settingsOverlay.style.display = 'block';
+});
 
+hideSettingsButton.addEventListener('click', () => {
+  settingsDialog.close();
+  settingsOverlay.style.display = 'none';
+});
+
+
+theme.addEventListener("click", () => {
+  if (body.classList.contains("dark-mode")) {
+    body.classList.remove("dark-mode");
+    body.classList.add("light-mode");
+    localStorage.setItem("theme", "light-mode");
+    theme.style.backgroundColor = "#ccc";
+
+  }
+  else {
+    body.classList.remove("light-mode");
+    body.classList.add("dark-mode");
+    localStorage.setItem("theme", "dark-mode");
+    theme.style.backgroundColor = "black"
+
+  }
+})
+
+body.classList.add(localStorage.theme);
 
 
 

@@ -1,5 +1,4 @@
-export { batterie, latence, heuresComplete, masquerHeure, masquerMinute, masquerSeconde, dateDiv, masquerAnnee, masquerMois, masquerJour, themeSysteme }
-var element = document.body;
+export { batterie, latence, heuresComplete, masquerHeure, masquerMinute, masquerSeconde, dateDiv, masquerAnnee, masquerMois, masquerJour }
 var heuresComplete = document.querySelector('.heuresComplete');
 var batterie = document.querySelector('.batterie');
 var latence = document.querySelector('.latence');
@@ -12,10 +11,7 @@ var masquerAnnee = document.querySelector('.annee')
 var masquerMois = document.querySelector('.mois')
 var masquerJour = document.querySelector('.jour')
 
-const settingsDialog = document.querySelector('#settings');
-const settingsOverlay = document.querySelector('#settings-overlay');
-const showSettingsButton = document.querySelector('#show-settings');
-const hideSettingsButton = document.querySelector('#hide-settings');
+
 
 
 // Récupérer la date actuelle : 
@@ -69,31 +65,48 @@ var affichageDate = function () {
 }
 affichageDate();
 
+
 var affichageHeure = function () {
-
     //Affichage dans nos DIV du HTML :
-
-    heuresComplete.textContent = heures + ":" + minutes + ":" + secondes;
+    // heuresComplete.textContent = today.toLocaleTimeString();
     masquerHeure.textContent = minutes + ":" + secondes;
     masquerMinute.textContent = heures + ":" + secondes;
     masquerSeconde.textContent = heures + ":" + minutes;
 
-    // Lancer la fonction affichage heure toutes les 1000 ms, soit toute les secondes : 
-    setTimeout(affichageHeure, 1000);
 }
 
 affichageHeure()
 
+setInterval(myTimer, 10);
 
-var affichageLatence = function () {
-    let lat = navigator.connection.rtt;
-    //  var late = Number(localStorage.getItem('latence'))
-    //Affichage dans nos DIV du HTML : 
-    latence.textContent = lat + "/ms";
+function myTimer() {
+    const date = new Date();
+    heuresComplete.textContent = date.toLocaleTimeString();
 }
 
 
-affichageLatence();
+
+
+fetch("/Projet-JS/img/fd-ecran.jpg").then(function (response) {
+    if (response.ok) {
+        const observer = new PerformanceObserver((list) => {
+            list.getEntries().forEach((entry) => {
+                const request = entry.responseStart - entry.requestStart;
+                if (request > 0 && entry.name == "http://127.0.0.1:5500/Projet-JS/img/fd-ecran.jpg") {
+                    console.log(`${entry.name} : Request time: ${request} ms`)
+                    setInterval(delayLatency, 100)
+
+                    function delayLatency() {
+                        latence.innerHTML = `${request.toFixed(2)}/ms`
+                    }
+                }
+            })
+        })
+
+        observer.observe({ type: "resource", buffered: true })
+        return response.blob();
+    }
+})
 
 var affichageBatterie = function () {
     navigator.getBattery().then(battery => {
@@ -143,52 +156,6 @@ var affichageBatterie = function () {
 }
 affichageBatterie();
 
-function vibrate() {
-    if (!window) {
-        return;
-    }
-
-    if (!window.navigator) {
-        return;
-    }
-
-    if (!window.navigator.vibrate) {
-        return;
-    }
-    navigator.vibrate = navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate
-}
-
-
-if (navigator.vibrate) {
-    // vibration API supported
-    vibration.addEventListener('click', function (ev) {
-        console.log('body clicked. Time to shake.');
-        //navigator.vibrate(1000);
-        var vib = navigator.vibrate([500, 300, 100]);
-
-        vibration.textContent = vib
-    });
-}
-
-function themeSysteme() {
-
-    if (element.classList.contains("dark-mode")) {
-        element.classList.remove("dark-mode");
-        element.classList.add("light-mode");
-        localStorage.setItem("theme", "light-mode");
-
-    }
-    else {
-        element.classList.remove("light-mode");
-        element.classList.add("dark-mode");
-        localStorage.setItem("theme", "dark-mode");
-
-    }
-    //document.getElementById("currentTheme").innerHTML= localStorage.theme;
-    //element.innerHTML= localStorage.theme;
-
-}
-element.classList.add(localStorage.theme);
 latence.classList.add(localStorage.displayLat);
 batterie.classList.add(localStorage.displayBat);
 heuresComplete.classList.add(localStorage.displayH);
@@ -201,13 +168,4 @@ masquerMois.classList.add(localStorage.displayMdm);
 masquerJour.classList.add(localStorage.displayMdj);
 
 
-showSettingsButton.addEventListener('click', () => {
-    settingsDialog.show();
-    settingsOverlay.style.display = 'block';
-});
-
-hideSettingsButton.addEventListener('click', () => {
-    settingsDialog.close();
-    settingsOverlay.style.display = 'none';
-});
 
