@@ -76,21 +76,21 @@
 // }).$mount('#app')
 
 // IMPORTANT: This is a JS-for-fun - and a BAD example how to secure your content:
-var password = "demo"; // because ANYONE CAN SEE THIS IN VIEW SOURCE!
+// var password = "demo"; // because ANYONE CAN SEE THIS IN VIEW SOURCE!
 
 
-// Repeatedly prompt for user password until success:
-(function promptPass() {
+// // Repeatedly prompt for user password until success:
+// (function promptPass() {
 
-    var psw = prompt("Enter your Password");
+//     var psw = prompt("Enter your Password");
 
-    while (psw !== password) {
-        alert("Incorrect Password");
-        return promptPass();
-    }
+//     while (psw !== password) {
+//         alert("Incorrect Password");
+//         return promptPass();
+//     }
 
-}());
+// }());
 
 
-alert('WELCOME');
+// alert('WELCOME');
 // or show you page content
