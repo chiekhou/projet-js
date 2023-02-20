@@ -27,7 +27,7 @@
     text-align: center;
   }
   
-  button {
+  #start, #stop ,#reset {
     margin: 5px;
     padding: 10px;
     background-color: #4CAF50;

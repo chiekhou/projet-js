@@ -1,0 +1,283 @@
+<!DOCTYPE >
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/calculatrice.css">
+	<link rel="stylesheet" href="/css/chrono.css">
+	<link rel="stylesheet" href="/css/timer.css">
+	<link rel="stylesheet" href="/css/tic-tac-toe.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<title>OS</title>
+</head>
+
+<body>
+	<nav class="navbar">
+		<ul class="nav-list">
+			<li class="heuresComplete">
+				<a href="#"></a>
+			</li>
+			<li class="ch">
+				<a href="#"></a>
+			</li>
+			<li class="cm">
+				<a href="#"></a>
+			</li>
+			<li class="cs">
+				<a href="#"></a>
+			</li>
+			<li class="annee">
+				<a href="#"></a>
+			</li>
+			<li class="mois">
+				<a href="#"></a>
+			</li>
+			<li class="jour">
+				<a href="#"></a>
+			</li>
+			<li class="date" >
+				<a href="#"></a>
+			</li>
+			<li class="batterie">
+			
+			</li>
+
+			<li class="latence">
+			</li>
+		</ul>
+	</nav>
+
+	<!-- PARAMETRES SYSTEMES -->
+		<div class="settings-overlay"></div>
+		<dialog class="settings">
+			<nav class="nav-settings">
+				<ul class="buttons">
+					<li class="close">
+						<a class="hide-settings" href="#">
+							<span>x</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="config-mode" style="margin-bottom: 5px;">
+				<label class="switch">
+					<input type="checkbox">
+					<span class="slider round theme"></span>
+				</label>
+			</div>
+
+			<div class="config-latence">
+				<h6>Afficher/Masquer la latence</h6>
+				<button class="afficher-latence">Afficher</button>
+				<button class="masquer-latence">Masquer</button>
+			</div>
+
+			<div class="config-batterie">
+				<h6>Afficher/Masquer la batterie</h6>
+				<button class="afficher-batterie">Afficher</button>
+				<button class="masquer-batterie">Masquer</button>
+			</div>
+
+			<div class="config-heure">
+
+				<h6>Afficher/Masquer les secondes</h6>
+				<div class="secondes">
+					<button class="afficher-secondes">Afficher</button>
+					<button class="masquer-secondes">Masquer</button>
+				</div>
+
+				<h6>Afficher/Masquer les minutes</h6>
+				<div class="minutes">
+					<button class="afficher-minutes">Afficher</button>
+					<button class="masquer-minutes">Masquer</button>
+				</div>
+
+				<h6>Afficher/Masquer l'heure</h6>
+				<div class="heure">
+					<button class="afficher-heures">Afficher</button>
+					<button class="masquer-heures">Masquer</button>
+				</div>
+			</div>
+
+				<div class="config-date">
+					<h6>Afficher/Masquer la date</h6>
+					<button class="afficher-date">Afficher</button>
+					<button class="masquer-date">Masquer</button>
+
+					<h6>Afficher/Masquer les annees</h6>
+					<div class="annees">
+						<button class="afficher-annee">Afficher</button>
+						<button class="masquer-annee">Masquer</button>
+					</div>
+
+					<h6>Afficher/Masquer les mois</h6>
+
+					<button class="afficher-mois">Afficher</button>
+					<button class="masquer-mois">Masquer</button>
+
+
+					<div class="jours">
+						<h6>Afficher/Masquer les jours</h6>
+						<button class="afficher-jour">Afficher</button>
+						<button class="masquer-jour">Masquer</button>
+					</div>
+
+				</div>
+
+				<!-- <div class="config-vibration">
+					<h6>Afficher/Masquer les vibrations</h6>
+					<button class="afficher">Afficher</button>
+					<button class="masquer">Masquer</button>
+				</div> -->
+		</dialog>
+
+
+<!-- APPLICATION HORLOGE NUMERIQUE ET CHRONOMETRE-->
+
+	<dialog class="timer-window">
+		<nav class="nav-settings">
+			<ul class="buttons">
+				<li class="close">
+					<a class="hide-timer" href="#">
+						<span>x</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="timer">
+			<span class="minutes">00</span>:<span class="seconds">00</span>
+		  </div>
+		  <button id="start">Start</button>
+		  <button id="stop">Stop</button>
+		  <button id="reset">Reset</button>
+		</div>
+
+		<!-- <div class="timer">
+			<span class="minutes">00</span>:<span class="seconds">00</span>
+		  </div>
+		  <div class="controls">
+			<label for="minutes-input">Minutes:</label>
+			<input type="number" id="minutes-input" min="0" max="60" value="0">
+			<label for="seconds-input">Seconds:</label>
+			<input type="number" id="seconds-input" min="0" max="60" value="0">
+			<button id="start">Start</button>
+			<button id="stop">Stop</button>
+			<button id="reset">Reset</button>
+		  </div> -->
+
+	</dialog>
+
+	<!-- APPLICATION TIC TAC TOE -->
+
+	<dialog class="tic-tac-window">
+		<nav class="nav-settings">
+			<ul class="buttons">
+				<li class="close">
+					<a class="hide-tic-tac" href="#">
+						<span>x</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+        <h1>Tic Tac Toe</h1>
+        <div id="grid">
+          <div id="c1" class="case"></div>
+          <div id="c2" class="case"></div>
+          <div id="c3" class="case"></div>
+          <div id="c4" class="case"></div>
+          <div id="c5" class="case"></div>
+          <div id="c6" class="case"></div>
+          <div id="c7" class="case"></div>
+          <div id="c8" class="case"></div>
+          <div id="c9" class="case"></div>
+        </div>
+        <div id="score">
+          <p>C'est au tour de Joueur <span id="joueur">1</span></p>
+          <p>Score Joueur 1 : <span id="score1">0</span></p>
+          <p>Score Joueur 2 : <span id="score2">0</span></p>
+          <p>Matchs nuls : <span id="scoreNul">0</span></p>
+        </div>
+</dialog>
+
+
+<!-- APPLICATION CALCULETTE-->
+
+<dialog class="calculatrice-window">
+	<nav class="nav-settings">
+		<ul class="buttons">
+			<li class="close">
+				<a class="hide-calculatrice" href="#">
+					<span>x</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+<div class="calculatrice">
+	<div class="ecran"></div>
+	<div class="touches">
+		<button data-key="8" class="bouton">C</button>
+		<button data-key="53" class="bouton">(</button>
+		<button data-key="219" class="bouton">)</button>
+		<button data-key="111" class="bouton">/</button>
+		<button data-key="103" class="bouton">7</button>
+		<button data-key="104" class="bouton">8</button>
+		<button data-key="105" class="bouton">9</button>
+		<button data-key="106" class="bouton">*</button>
+		<button data-key="100" class="bouton">4</button>
+		<button data-key="101" class="bouton">5</button>
+		<button data-key="102" class="bouton">6</button>
+		<button data-key="109" class="bouton">-</button>
+		<button data-key="97" class="bouton">1</button>
+		<button data-key="98" class="bouton">2</button>
+		<button data-key="99" class="bouton">3</button>
+		<button data-key="107" class="bouton">+</button>
+		<button data-key="96" class="bouton">0</button>
+		<button data-key="110" class="bouton">.</button>
+		<button data-key="13" class="bouton">=</button>
+	</div>
+</div>
+
+</dialog>
+
+<!-- MENU APPLICATION -->
+	<footer class="footer">
+		<ul>
+			<li>
+		<button class="show-settings">
+			<i class="fas fa-cog"></i>
+		</button>
+	</li>
+
+		<li><button class="show-timer">
+			<i class="far fa-clock"></i>
+		</button>
+		</li>
+
+		<li><button class="show-tic-tac">
+			<i class="far fa-chess-board"></i>
+		</button>
+		</li>
+
+		<li><button class="show-calculatrice">
+			<i class="fas fa-calculator"></i>
+		</button>
+		</li>
+		</button>
+
+	</ul>
+	</footer>
+
+	<script src="/js/app-tic-tac-toe.js" type="module" ></script>
+	<script src="/js/calculatrice.js" type="module" ></script>
+	<script src="/js/timer.js" type="module" ></script>
+	<script src="/js/chrono.js" type="module" ></script>
+	<script src="/js/parametre.js" type="module"></script>
+	<script src="/js/main.js" type="module"></script>
+	<script src="/js/auth.js"></script>
+
+</body>
+</html>

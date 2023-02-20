@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+.tic-tac-window{
+  box-sizing:border-box;
+  width: 50vh;
+  height: 81%; 
+  margin: 20px auto ;
+  text-align: center;
+  background-color: #464141;;
+
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 3rem 3rem 3rem;
+  grid-template-rows: 3rem 3rem 3rem;
+  gap: 1rem;
+  margin: 10px 0px 10px 50px;
+}
+
+.case {
+  border: 2px solid lightgrey;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+p:first-of-type {
+  color: lightseagreen;
+}
