@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/responsive.css">
 	<link rel="stylesheet" href="/css/calculatrice.css">
 	<link rel="stylesheet" href="/css/chrono.css">
 	<link rel="stylesheet" href="/css/timer.css">
@@ -183,7 +184,10 @@
 				</li>
 			</ul>
 		</nav>
+		
+		<div class="card-tic-tac">
         <h1>Tic Tac Toe</h1>
+		
         <div id="grid">
           <div id="c1" class="case"></div>
           <div id="c2" class="case"></div>
@@ -195,12 +199,15 @@
           <div id="c8" class="case"></div>
           <div id="c9" class="case"></div>
         </div>
+	
         <div id="score">
           <p>C'est au tour de Joueur <span id="joueur">1</span></p>
           <p>Score Joueur 1 : <span id="score1">0</span></p>
           <p>Score Joueur 2 : <span id="score2">0</span></p>
           <p>Matchs nuls : <span id="scoreNul">0</span></p>
         </div>
+	</div>
+
 </dialog>
 
 
@@ -248,23 +255,27 @@
 		<ul>
 			<li>
 		<button class="show-settings">
-			<i class="fas fa-cog"></i>
+			<img src="img/parametres.png" alt="">
 		</button>
+		<h5>Paramétres</h5>
 	</li>
 
 		<li><button class="show-timer">
-			<i class="far fa-clock"></i>
+			<img src="img/lhorloge.png" alt="">
 		</button>
+		<h5>Horloge</h5>
 		</li>
 
 		<li><button class="show-tic-tac">
-			<i class="far fa-chess-board"></i>
+			<img src="img/tic-tac-toe.png" alt="">
 		</button>
+		<h5>Tic-Tac-Toe</h5>
 		</li>
 
 		<li><button class="show-calculatrice">
-			<i class="fas fa-calculator"></i>
+			<img src="img/calculatrice.png" alt="">
 		</button>
+		<h5>Calculette</h5>
 		</li>
 		</button>
 
