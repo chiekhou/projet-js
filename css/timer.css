@@ -3,7 +3,7 @@
     font-weight: bold;
     text-align: center;
     padding: 10px;
-    background-color: #f5f5f5;
+    background-color: #464141;
     border-radius: 5px;
     display: inline-block;
   }
@@ -27,7 +27,7 @@
     text-align: center;
   }
   
-  #start, #stop ,#reset {
+  #start1, #stop1 ,#reset1 {
     margin: 5px;
     padding: 10px;
     background-color: #4CAF50;
