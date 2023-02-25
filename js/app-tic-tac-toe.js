@@ -23,7 +23,6 @@ let state = {
 };
 
 const resetState = () => {
-  joueurEnCours = 1;
   state.c1 = 0;
   state.c2 = 0;
   state.c3 = 0;

@@ -90,7 +90,7 @@ fetch("/img/fd-ecran.jpg").then(function (response) {
                 const request = entry.responseStart - entry.requestStart;
                 if (request > 0 && entry.name == "http://127.0.0.1:5500/img/fd-ecran.jpg") {
                     console.log(`${entry.name} : Request time: ${request} ms`)
-                    setInterval(delayLatency, 100)
+                    setInterval(delayLatency, 1000)
 
                     function delayLatency() {
                         latence.innerHTML = `${request.toFixed(2)}/ms`
@@ -123,9 +123,7 @@ var affichageBatterie = function () {
         // }
 
         function updateLevelInfo() {
-            batterie.textContent = (battery.level * 100).toFixed() + "%"
-            console.log("Niveau de batterie : "
-                + battery.level * 100 + "%");
+            batterie.innerHTML = "<div class='center'><span>"+(battery.level * 100).toFixed() + "%</span></div>";
         }
 
         // battery.addEventListener('chargingtimechange', () => {

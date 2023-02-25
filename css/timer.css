@@ -1,39 +1,62 @@
 .timer {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
+    width: 3em;
     text-align: center;
-    padding: 10px;
-    background-color: #464141;
+    padding: 5px;
+    background-color: black;
     border-radius: 5px;
     display: inline-block;
   }
-  
-  .controls {
-    margin: 10px;
-  }
-  
-  label {
-    margin-right: 10px;
-  }
-  
+
+  .timer-window {
+    margin: 20px auto ;
+    background-color: #464141;
+    color: #fff;
+    text-align: center;
+}
   input[type="number"] {
-    width: 40px;
+    width: 35px;
     padding: 5px;
     border-radius: 5px;
     border: none;
     background-color: #f5f5f5;
-    font-size: 1rem;
+    font-size: 13px;
     font-weight: bold;
     text-align: center;
   }
   
   #start1, #stop1 ,#reset1 {
+    height: 2em;
     margin: 5px;
+    font-size: 13px;
     padding: 10px;
     background-color: #4CAF50;
     color: white;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer;   
   }
+
+  #horloge {
+    background-color:#000000;
+    color:silver;
+    font-size:30px
+  }
+  
+  .card-horloge{
+    margin: 10px 0px;
+    padding: 10px 0px;
+  }
+
+  .card-minuteur{
+    margin: 15px 0px;
+  }
+
+  .block-secondes{
+    margin-top: 10px;
+  }
+  .card-minuteur .timer{
+    margin: 5px 0px;
+  }
+
   

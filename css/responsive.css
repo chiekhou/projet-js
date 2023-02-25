@@ -1,38 +1,64 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .nav-list {
-        background-color: pink;
-        font-size: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .nav-list {
+    background-color: pink;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .nav-list li {
-        list-style: none;
-        margin: 10px 10px;
-        font-weight: bolder;
-    }
-    footer {
-        height: 10rem;
-        border-radius: 10px;
-        background-color: #464141;
-        width: 50%;
-        margin: 20px auto;
-        top: 10%;
-        left: 0px;
-        right: 0px;
-        font-size: 12px;
-    }
-    footer li {
-        list-style: none;
-        width: 40%;
-        text-align: center;
-        margin: 15px auto auto 15px;
-        padding: 0px auto;
+  .nav-list li {
+    list-style: none;
+    margin: 10px 10px;
+    padding: 10px;
+    font-weight: bolder;
+  }
 
-    }
+  .settings  {
+    width: 40vh;
 
+}
+
+  .timer-window {
+    width: 40vh;
+    background-color: yellow;
+    color: aliceblue;
+  }
+
+  .card-chrono .timer {
+    margin: auto;
+  }
+
+  .card-minuteur .controls input {
+    display: inline-block;
+    flex-direction: row-reverse;
+    font-size: 10px;
+  }
+
+  .card-minuteur .controls label {
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  footer {
+    height: 10rem;
+    border-radius: 10px;
+    background-color: #464141;
+    width: 50%;
+    margin: 20px auto;
+    top: 10%;
+    left: 0px;
+    right: 0px;
+    font-size: 12px;
+  }
+  footer li {
+    list-style: none;
+    width: 40%;
+    text-align: center;
+    margin: 15px auto auto 15px;
+    padding: 0px auto;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up)

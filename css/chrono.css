@@ -1,19 +1,14 @@
-.timer {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px;
-  background-color: #464141;
-  border-radius: 5px;
-  display: inline-block;
-}
-
 #start, #stop ,#reset {
+  height: 2em;
   margin: 5px;
+  font-size: 13px;
   padding: 10px;
   background-color: #4CAF50;
   color: white;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.card-chrono{
+  padding: 10px 0px;
 }

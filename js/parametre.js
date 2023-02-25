@@ -39,6 +39,9 @@ const theme = document.querySelector(".theme");
 const body = document.body;
 const footer = document.querySelector(".footer");
 
+body.style.backgroundImage = "url('/img/fd-ecran.jpg')";
+body.style.backgroundSize = "100% 100%"
+
 // Affichage et masquer la latence
 afficherLat.addEventListener("click", () => {
   if (getComputedStyle(latence).display != "block") {
@@ -275,6 +278,9 @@ hideCalculatriceWindow.addEventListener('click', () => {
   footer.style.display = 'block';
 });
 
+if(body.classList.contains("")){
+  body.classList.add("")
+}
 
 
 theme.addEventListener("click", () => {
