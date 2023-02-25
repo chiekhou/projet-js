@@ -111,8 +111,8 @@ input:checked+.slider:before {
     background-color: rgb(79, 211, 79);
     border-radius: 5px;
     border: 1px solid white;
-    margin: 0.5em auto;
-    height: 1px;
+    /* margin: 0.5em auto; */
+    height: 10px;
 
 }
 
