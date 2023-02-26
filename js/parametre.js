@@ -1,4 +1,4 @@
-import { heuresComplete, masquerHeure, masquerMinute, masquerSeconde, dateDiv, batterie, latence, masquerAnnee, masquerMois, masquerJour } from './main.js';
+import { heuresComplete, masquerHeure, masquerMinute, masquerSeconde, dateDiv, batterie, latence, masquerAnnee, masquerMois, masquerJour,vibration } from './main.js';
 const afficherLat = document.querySelector(".afficher-latence");
 const masquerLat = document.querySelector(".masquer-latence");
 const afficherBat = document.querySelector(".afficher-batterie");
@@ -17,6 +17,8 @@ const afficherMois = document.querySelector(".afficher-mois");
 const buttonMasquerMois = document.querySelector(".masquer-mois");
 const afficherJour = document.querySelector(".afficher-jour");
 const buttonMasquerJour = document.querySelector(".masquer-jour");
+const afficherVibration = document.querySelector(".afficher-vibration");
+const masquerVibration = document.querySelector(".masquer-vibration");
 
 const settingsDialog = document.querySelector('.settings');
 const settingsOverlay = document.querySelector('.settings-overlay');
@@ -227,6 +229,22 @@ buttonMasquerJour.addEventListener("click", () => {
   masquerJour.classList.add("block-mode")
   localStorage.setItem("displayDc", "none-mode");
   localStorage.setItem("displayMdj", "block-mode");
+})
+
+afficherVibration.addEventListener("click", () => {
+  if (getComputedStyle(vibration).display != "block") {
+    vibration.classList.remove("none-mode")
+    vibration.classList.add("block-mode")
+    localStorage.setItem("displayVib", "block-mode");
+  }
+})
+
+masquerVibration.addEventListener("click", () => {
+  vibration.classList.remove("block-mode")
+  vibration.classList.add("none-mode")
+  masquerJour.classList.add("block-mode")
+  localStorage.setItem("displayVib", "none-mode");
+
 })
 
 showSettingsButton.addEventListener('click', () => {

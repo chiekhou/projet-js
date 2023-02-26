@@ -1,3 +1,4 @@
+import { vibrate} from './main.js';
 let timerInterval;
 let minutes = 0;
 let seconds = 0;

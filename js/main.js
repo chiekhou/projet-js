@@ -1,4 +1,5 @@
-export { batterie, latence, heuresComplete, masquerHeure, masquerMinute, masquerSeconde, dateDiv, masquerAnnee, masquerMois, masquerJour }
+"use strict";
+export { batterie, latence, heuresComplete, masquerHeure,vibration, masquerMinute, masquerSeconde, dateDiv, masquerAnnee, masquerMois, masquerJour, vibrate }
 var heuresComplete = document.querySelector('.heuresComplete');
 var batterie = document.querySelector('.batterie');
 var latence = document.querySelector('.latence');
@@ -147,6 +148,34 @@ var affichageBatterie = function () {
 }
 affichageBatterie();
 
+function vibrate() {
+    if (!window) {
+        return;
+    }
+
+    if (!window.navigator) {
+        return;
+    }
+
+    if (!window.navigator.vibrate) {
+        return;
+    }
+    navigator.vibrate = navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate
+    window.navigator.vibrate([200, 100, 200]);
+}
+
+
+if ('vibrate' in navigator) {
+    // vibration API supported
+    vibration.addEventListener('click', function (ev) {
+        console.log('body clicked. Time to shake.');
+        //navigator.vibrate(1000);
+        var vib = navigator.vibrate([500, 300, 100]);
+
+        vibration.textContent = vib
+    });
+}
+
 latence.classList.add(localStorage.displayLat);
 batterie.classList.add(localStorage.displayBat);
 heuresComplete.classList.add(localStorage.displayH);
@@ -157,6 +186,7 @@ dateDiv.classList.add(localStorage.displayDc);
 masquerAnnee.classList.add(localStorage.displayMda);
 masquerMois.classList.add(localStorage.displayMdm);
 masquerJour.classList.add(localStorage.displayMdj);
+vibration.classList.add(localStorage.displayVib);
 
 
 
