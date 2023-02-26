@@ -23,6 +23,9 @@ let state = {
 };
 
 const resetState = () => {
+
+  // joueurEnCours = 1;
+
   state.c1 = 0;
   state.c2 = 0;
   state.c3 = 0;
@@ -117,3 +120,30 @@ const jouerCase = (e) => {
 cases.forEach((el) => {
   el.addEventListener("click", jouerCase);
 });
+
+// function stopJeu() {
+//   clearInterval(state);
+// }
+
+function resetJeu() {
+  // stopJeu();
+//   state = 0;
+//   joueur = 0;
+//   score1 = 0;
+//   score2 = 0;
+//   scoreNul = 0;
+//   document.querySelector('.joueur').innerHTML = '00';
+//   document.querySelector('.score1').innerHTML = '00';
+//   document.querySelector('.score2').innerHTML = '00';
+//   document.querySelector('.scoreNul').innerHTML = '00';
+// }
+
+// function padNumber(num) {
+//   return num.toString().padStart(2, '0');
+}
+
+
+// document.getElementById('reset').addEventListener('click', resetJeu);
+// function resetScore() {
+//   document.getElementById("score").reset();
+// }

@@ -34,3 +34,13 @@
 p:first-of-type {
   color: lightseagreen;
 }
+
+input[type="button" i] {
+  margin: 5px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

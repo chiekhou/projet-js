@@ -115,6 +115,7 @@ input:checked+.slider:before {
     border: 1px solid white;
     margin: 0.5em auto;
     height: 1px;
+
 }
 
 .batterie span{
